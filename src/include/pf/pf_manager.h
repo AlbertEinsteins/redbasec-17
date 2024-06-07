@@ -7,15 +7,15 @@
 
 namespace redbase {
 
-class PF_Manager {
+class PFManager {
 public:
     /* Create a DB file */
-    explicit PF_Manager(const std::string& db_file);
+    explicit PFManager(const std::string& db_file);
 
-    PF_Manager() = default;
+    PFManager() = default;
 
     /* For sub class to implement */
-    virtual ~PF_Manager() = default;
+    virtual ~PFManager() = default;
 
     /* close file resources */
     void Shutdown();

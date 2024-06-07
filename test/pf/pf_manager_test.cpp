@@ -1,4 +1,4 @@
-#include "gtest/gtest.h"
+#include <gtest/gtest.h>
 #include "pf/pf_manager.h"
 
 namespace redbase {
@@ -8,11 +8,11 @@ TEST(PFManagerTest, TestGetPage) {
     remove("test.db");
 
 
-    auto pf_manager = std::make_shared<PF_Manager>(db_fname);
+    auto pf_manager = std::make_shared<PFManager>(db_fname);
 
     char *dt = new char[1 << 12];
 
-    std::string test1 = "x 123123";
+    std::string test1 = "We Could not solve this problem";
 
     memset(dt, 0, 1 << 12);
     memcpy(dt, test1.c_str(), test1.size());
@@ -45,16 +45,17 @@ TEST(PFManagerTest, TestGetPage) {
 
 TEST(PFManagerTest, TestFile) {
 //  remove("xxx.t");
-  std::fstream a("xxx.t", std::ios::app);
+  // std::fstream a("xxx.t", std::ios::app);
 
-  a.seekp(0);
-  a.write("123", 3);
+  // a.seekp(0);
+  // a.write("123", 3);
 
-  std::cout << a.tellp() << a.tellg() << std::endl;
-  a.seekp(0, std::ios::end);
-  std::cout << a.tellp() << a.tellg() << std::endl;
+  // std::cout << a.tellp() << a.tellg() << std::endl;
+  // a.seekp(0, std::ios::end);
+  // std::cout << a.tellp() << a.tellg() << std::endl;
 
-  a.close();
+  // a.close();
+  std::cout << "HelloWorld" << std::endl;
 
 }
 

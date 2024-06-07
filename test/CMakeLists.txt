@@ -34,5 +34,3 @@ foreach (redbase_test_source ${REDBASE_TEST_SOURCES})
     target_link_libraries(${redbase_test_name} redbase gtest gtest_main)
 
 endforeach ()
-
-

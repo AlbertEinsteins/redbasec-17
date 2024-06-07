@@ -1,6 +1,6 @@
 //===----------------------------------------------------------------------===//
 //
-//                         BusTub
+//                         REDBASE
 //
 // macros.h
 //
@@ -16,13 +16,13 @@
 #include <exception>
 #include <stdexcept>
 
-namespace bustub {
+namespace redbase {
 
-#define BUSTUB_ASSERT(expr, message) assert((expr) && (message))
+#define REDBASE_ASSERT(expr, message) assert((expr) && (message))
 
 #define UNIMPLEMENTED(message) throw std::logic_error(message)
 
-#define BUSTUB_ENSURE(expr, message)                  \
+#define REDBASE_ENSURE(expr, message)                  \
   if (!(expr)) {                                      \
     std::cerr << "ERROR: " << (message) << std::endl; \
     std::terminate();                                 \
@@ -43,4 +43,4 @@ namespace bustub {
   DISALLOW_COPY(cname);               \
   DISALLOW_MOVE(cname);
 
-}  // namespace bustub
+}  // namespace REDBASE
